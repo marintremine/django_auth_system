@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homepage</title>
+</head>
+<body>
+    <h1>Welcome {{ user.username |upper }} to the homepage</h1>
+    <h2>Group(s): {{ user.groups.all.0.name }}</h2>
+
+    <a href="{% url 'artist_home' %}">Artist Space</a>
+    <a href="{% url 'employee_home' %}">Employee Space</a>
+    
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>
